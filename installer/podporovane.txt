@@ -1,5 +1,2 @@
-Linux 12.1
-Windows 11
-MacOs 6969
 linux6.12.33+kali-amd64
 win3210

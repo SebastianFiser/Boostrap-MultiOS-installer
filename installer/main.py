@@ -25,11 +25,12 @@ def OsCheck():
     os_system = (os_name + os_version)
     print(os_system)
 
+#kontrola zda je systém v podporovaném seznamu
     if os_system in supported_list:
         print("Váš systém je podporován, může se pokračovat v instalaci.")
     else:
         print("Váš systém není podporován, instalace bude ukončena.")
         sys.exit()
-#později možnost vylepšit přes platform.release() 
+
 
 OsCheck()
