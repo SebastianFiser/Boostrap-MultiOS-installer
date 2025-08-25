@@ -13,13 +13,21 @@ with open("installer/podporovane.txt", "r") as f:
             continue
         supported_list.append(line.strip())
 
-print(supported_list)
+#print(supported_list)
 
 def OsCheck():
     os_name = sys.platform #název OS
-    print(os_name)
+    #print(os_name)
     os_version = platform.release() #verze OS
-    print(os_version)
+    #print(os_version)
+    os_system = (os_name + os_version)
+    #print(os_system)
+
+    if os_system in supported_list:
+        print("Váš systém je podporován, může se pokračovat v instalaci.")
+    else:
+        print("Váš systém není podporován, instalace bude ukončena.")
+        sys.exit()
 #později možnost vylepšit přes platform.release() 
 
-#OsCheck()
+OsCheck()
