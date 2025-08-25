@@ -7,7 +7,9 @@ import platform
 #import pkg_resources
 #sstém na převedení obsahu podporovane.txt do listu
 supported_list = []
-with open("installer/podporovane.txt", "r") as f:
+current_dir = os.path.dirname(__file__)
+path = os.path.join(current_dir, "podporovane.txt")
+with open(path, "r") as f:
     for line in f:
         if line.strip() =="":
             continue
@@ -21,7 +23,7 @@ def OsCheck():
     os_version = platform.release() #verze OS
     #print(os_version)
     os_system = (os_name + os_version)
-    #print(os_system)
+    print(os_system)
 
     if os_system in supported_list:
         print("Váš systém je podporován, může se pokračovat v instalaci.")
