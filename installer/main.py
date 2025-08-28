@@ -6,6 +6,7 @@ import os
 import platform
 #import pkg_resources
 #sstém na převedení obsahu podporovane.txt do listu
+supported_python = (3, 10)
 supported_list = []
 current_dir = os.path.dirname(__file__)
 path = os.path.join(current_dir, "podporovane.txt")
@@ -30,6 +31,12 @@ def OsCheck():
         print("Váš systém je podporován, může se pokračovat v instalaci.")
     else:
         print("Váš systém není podporován, instalace bude ukončena.")
+        sys.exit()
+
+    if sys.version_info >= (supported_python):
+        print("Vaše verze Pythonu je podporována, může se pokračovat v instalaci.")
+    else:
+        print("Vaše verze Pythonu není podporována, instalace bude ukončena.")
         sys.exit()
 
 
