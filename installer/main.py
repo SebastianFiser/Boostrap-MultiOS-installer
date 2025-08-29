@@ -26,7 +26,7 @@ with open(path, "r") as f:
         name, version = line.strip().split()
         packages_dict[name] = version
 
-print(packages_dict)
+#pint(packages_dict)
 
 def OsCheck():
     os_name = sys.platform #název OS
@@ -52,4 +52,4 @@ def OsCheck():
 
 
 
-#OsCheck()
+OsCheck()
