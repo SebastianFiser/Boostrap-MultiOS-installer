@@ -16,9 +16,17 @@ with open(path, "r") as f:
             continue
         supported_list.append(line.strip())
 
-packages_list = []
+packages_dict= {}
+current_dir = os.path.dirname(__file__)
+path = os.path.join(current_dir, "requirements.txt")
+with open(path, "r") as f:
+    for line in f:
+        if line.strip() =="":
+            continue
+        name, version = line.strip().split()
+        packages_dict[name] = version
 
-#print(supported_list)
+print(packages_dict)
 
 def OsCheck():
     os_name = sys.platform #název OS
@@ -44,4 +52,4 @@ def OsCheck():
 
 
 
-OsCheck()
+#OsCheck()
