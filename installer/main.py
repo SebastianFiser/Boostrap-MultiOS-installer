@@ -16,6 +16,8 @@ with open(path, "r") as f:
             continue
         supported_list.append(line.strip())
 
+packages_list = []
+
 #print(supported_list)
 
 def OsCheck():
@@ -38,6 +40,8 @@ def OsCheck():
     else:
         print("Vaše verze Pythonu není podporována, instalace bude ukončena.")
         sys.exit()
+
+
 
 
 OsCheck()
