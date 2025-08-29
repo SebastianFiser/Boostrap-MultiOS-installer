@@ -1,21 +1,22 @@
-requests
-numpy
-pandas
-matplotlib
-scipy
-flask
-django
-pytest
-pillow
-sqlalchemy
-beautifulsoup4
-lxml
-tqdm
-pyyaml
-jupyter
-notebook
-scikit-learn
-seaborn
-virtualenv
-click
-six
+requests 2.32.3
+numpy 1.26.4
+pandas 2.2.2
+matplotlib 3.9.0
+scipy 1.13.1
+flask 3.0.3
+django 5.0.6
+pytest 8.2.2
+pillow 10.3.0
+sqlalchemy 2.0.30
+beautifulsoup4 4.12.3
+lxml 5.2.2
+tqdm 4.66.4
+pyyaml 6.0.1
+jupyter 1.0.0
+notebook 7.2.0
+scikit-learn 1.5.0
+seaborn 0.13.2
+virtualenv 20.26.2
+click 8.1.7
+six 1.16.0
+seven 0.2.0
